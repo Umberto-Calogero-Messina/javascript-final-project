@@ -1,1 +1,161 @@
+@use '../mixins/hover.scss' as *;
+@use '../mixins/responsive.scss' as *;
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 9.375rem;
+  background-image: url(../../assets/images/slider-bg-1.jpg);
+  background-size: cover;
+  height: 919px;
+  color: white;
+  border-bottom: 0.125rem solid var(--color-header-hover);
+  &_menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color-header-bg);
+    padding: 3.125rem 0.625rem;
+    margin-inline: auto;
+    box-shadow: 0 0 9px 3px var(--color-header-shadow);
+    border-radius: 0.9375rem 0.9375rem 0 0;
+    width: 95%;
 
+    @include responsive(laptop) {
+      border-radius: 0.9375rem;
+      padding: 1.25rem 0.625rem;
+      margin-top: 0.625rem;
+    }
+    @include responsive(desktop) {
+      max-width: 1400px;
+      margin-inline: auto;
+    }
+    &-span {
+      font-size: 1.125rem;
+      @include responsive(tablet) {
+        font-size: 1.25rem;
+      }
+      @include responsive(laptop) {
+        display: none;
+      }
+    }
+  }
+  &_social {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 1.25rem;
+    @include responsive(laptop) {
+      margin-top: 1.25rem;
+      margin-right: 1.875rem;
+    }
+    @include responsive(desktop) {
+      margin-right: 3.125rem;
+    }
+    &-follow {
+      color: rgb(152, 152, 152);
+      @include responsive(tablet) {
+        font-size: 1.25rem;
+      }
+    }
+    &_link {
+      display: inline-flex;
+      width: 2.1875rem;
+      height: 2.1875rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9375rem;
+      margin-left: 0.625rem;
+      border-radius: 50%;
+      @include hover {
+        background-color: var(--color-header-hover);
+      }
+
+      @include responsive(tablet) {
+        width: 40px;
+        font-size: 1.125rem;
+      }
+    }
+  }
+  &_ul {
+    // display: none;
+    position: absolute;
+    top: 7.5rem;
+    left: 0;
+    padding-block: 5px;
+    background-color: var(--color-header-bg);
+    box-shadow: 0 0.5625rem 0.5625rem var(--color-header-shadow);
+    width: 100%;
+    border-radius: 0 0 0.9375rem 0.9375rem;
+    border-top: 1px solid var(--color-header-shadow);
+    @include responsive(laptop) {
+      position: static;
+      display: flex;
+      border: none;
+      box-shadow: none;
+    }
+
+    &-link {
+      padding: 0.9375rem 0.9375rem;
+      font-size: 0.9375rem;
+      @include responsive(tablet) {
+        font-size: 1.125rem;
+      }
+      @include hover {
+        background-color: #25394c;
+        border-radius: 0.625rem;
+        @include responsive(laptop) {
+          background-color: transparent;
+          color: var(--color-header-hover);
+        }
+      }
+    }
+  }
+  &_logo {
+    width: 150px;
+    @include responsive(tablet) {
+      width: 200px;
+    }
+  }
+
+  &_info {
+    margin-top: auto;
+    text-align: center;
+    padding: 0 5rem;
+    @include responsive(tablet) {
+      padding: 0 3.75rem;
+    }
+    @include responsive(laptop) {
+      padding: 12.5rem 6.25rem;
+      font-size: 1.25rem;
+    }
+
+    &-p {
+      margin-bottom: 3.75rem;
+      @include responsive(laptop) {
+        margin-bottom: 3.75rem;
+      }
+      @include responsive(desktop) {
+        max-width: 1400px;
+        margin-inline: auto;
+      }
+    }
+  }
+
+  &_button {
+    padding: 0.9375rem 2.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    background: #fff;
+    box-shadow: 0.5rem 0.5rem var(--color-header-hover);
+    @include responsive(tablet) {
+      font-size: 1.125rem;
+    }
+    @include responsive(laptop) {
+      font-size: 1.875rem;
+      box-shadow: 0.9375rem 0.9375rem var(--color-header-hover);
+    }
+  }
+}

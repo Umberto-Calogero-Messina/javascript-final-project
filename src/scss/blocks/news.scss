@@ -2,21 +2,25 @@
 @use '../mixins/hover.scss' as *;
 
 .news {
-  height: 950px;
-  padding-block: 70px;
-  display: grid;
-  grid-template-columns: 1fr;
-  @include responsive(tablet) {
-  }
-  @include responsive(laptop) {
-    padding-inline: 100px;
-    height: 530px;
-    grid-template-columns: repeat(3, 1fr);
-    padding-top: 100px;
-  }
-  @include responsive(desktop) {
-    height: 400px;
-    max-width: 1400px;
+  background-color: var(--color-bg-news);
+
+  &__container {
+    height: 950px;
+    padding-block: 70px;
+    display: grid;
+    grid-template-columns: 1fr;
     margin-inline: auto;
+
+    @include responsive(laptop) {
+      padding-inline: 100px;
+      height: 650px;
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 150px;
+    }
+    @include responsive(desktop) {
+      height: 600px;
+      max-width: 1400px;
+      padding-top: 180px;
+    }
   }
 }

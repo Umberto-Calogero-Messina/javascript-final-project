@@ -1,0 +1,74 @@
+@use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
+
+.video {
+  position: relative;
+  height: 900px;
+  display: flex;
+  align-items: end;
+  border-top: 2px solid var(--color-header-hover);
+  background-image: url(./assets/images/promo/promo-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  &__icons {
+    position: absolute;
+    left: calc(50% - 61px);
+    top: calc(50% - 61px);
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    padding-top: 45px;
+    padding-left: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  &__img {
+    width: 70px;
+  }
+}
+
+.video__text {
+  margin-bottom: 80px;
+  padding: 27px 0;
+  padding-left: 80px;
+  position: relative;
+  &--title {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 1px;
+    @include responsive(laptop) {
+      font-size: 40px;
+    }
+    @include responsive(desktop) {
+      font-size: 45px;
+    }
+  }
+  &--p {
+    font-size: 15px;
+    color: #a3a1b3;
+    font-weight: 500;
+    margin-bottom: 0;
+    @include responsive(laptop) {
+      font-size: 20px;
+    }
+    @include responsive(desktop) {
+      font-size: 20px;
+    }
+  }
+  &:after {
+    @include pseudo(9px, 100%);
+    left: 45px;
+    top: 5px;
+    border-left: 3px solid #de46d6;
+    border-radius: 20px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 9px 3px rgba(226, 30, 228, 0.5);
+    box-shadow: 0 0 9px 3px rgba(226, 30, 228, 0.5);
+  }
+}

@@ -20,6 +20,7 @@
   @include responsive(desktop) {
     max-width: 1400px;
     margin-inline: auto;
+    margin-bottom: 100px;
   }
   &__span {
     cursor: pointer;

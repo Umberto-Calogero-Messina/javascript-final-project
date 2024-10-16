@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-bottom: 9.375rem;
+  padding-bottom: 150px;
   background-image: url(../../assets/images/slider-bg-1.jpg);
   background-size: cover;
   height: 919px;
@@ -19,7 +19,15 @@
   }
 
   &__title {
-    font-size: 5rem;
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1;
+    @include responsive(tablet) {
+      font-size: 7rem;
+    }
+    @include responsive(laptop) {
+      font-size: 8rem;
+    }
   }
 
   &__info {
@@ -34,9 +42,10 @@
     }
 
     &-p {
-      margin-bottom: 3.75rem;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 2.75rem;
       @include responsive(laptop) {
-        margin-bottom: 3.75rem;
+        margin-bottom: 60px;
       }
       @include responsive(desktop) {
         max-width: 1400px;
@@ -54,6 +63,7 @@
     background-color: #fff;
     box-shadow: 0.5rem 0.5rem var(--color-header-hover);
     border-radius: 10px;
+    cursor: pointer;
     @include hover {
       background-color: #e2b7d3;
       color: rgb(29, 29, 29);

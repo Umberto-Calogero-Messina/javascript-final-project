@@ -1,1 +1,110 @@
-/* ESTILOS DEL FOOTER */
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.footer {
+  height: 350px;
+  text-align: center;
+  background-color: rgb(51, 13, 56);
+  @include responsive(laptop) {
+  }
+  @include responsive(desktop) {
+    height: 370px;
+  }
+
+  &__container {
+    position: relative;
+    padding: 60px 15px 25px;
+    @include responsive(desktop) {
+      max-width: 1400px;
+      margin-inline: auto;
+    }
+  }
+  .footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &--img {
+      width: 200px;
+      @include responsive(tablet) {
+        width: 250px;
+      }
+      @include responsive(desktop) {
+        width: 300px;
+      }
+    }
+  }
+
+  .footer__leftpic {
+    display: none;
+    @include responsive(laptop) {
+      display: block;
+      position: absolute;
+      left: 55px;
+      bottom: 10px;
+    }
+    &--img {
+      height: 400px;
+    }
+  }
+
+  .footer__rightpic {
+    display: none;
+    @include responsive(laptop) {
+      display: block;
+      position: absolute;
+      right: 50px;
+      bottom: 10px;
+    }
+    &--img {
+      height: 420px;
+    }
+  }
+
+  .footer__menu {
+    padding-top: 62px;
+    color: white;
+    list-style: none;
+    text-align: center;
+    padding-top: 3px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    @include responsive(laptop) {
+      font-size: 15px;
+    }
+    @include responsive(desktop) {
+      font-size: 23px;
+    }
+    &--li {
+      @include hover {
+        color: var(--color-header-hover);
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9190a5;
+    opacity: 0.2;
+    @include responsive(tablet) {
+      font-size: 12px;
+    }
+    @include responsive(desktop) {
+      font-size: 15px;
+    }
+  }
+}
+
+.social {
+  &--footer {
+    margin-bottom: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+}

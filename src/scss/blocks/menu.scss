@@ -1,0 +1,45 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.menu {
+  position: relative;
+  left: 0;
+  padding-block: 5px;
+  background-color: var(--color-header-bg);
+  box-shadow: 0 0.5625rem 0.5625rem var(--color-header-shadow);
+  width: 95%;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+  border-radius: 0 0 0.9375rem 0.9375rem;
+  border-top: 1px solid var(--color-header-shadow);
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s;
+  &--show {
+    height: 250px;
+  }
+
+  @include responsive(laptop) {
+    position: static;
+    display: flex;
+    border: none;
+    box-shadow: none;
+  }
+
+  &__item {
+    padding: 0.9375rem 0.9375rem;
+    font-size: 0.9375rem;
+    @include responsive(tablet) {
+      font-size: 1.125rem;
+    }
+
+    @include hover {
+      background-color: #25394c;
+      border-radius: 0.625rem;
+      @include responsive(laptop) {
+        background-color: transparent;
+        color: var(--color-header-hover);
+      }
+    }
+  }
+}

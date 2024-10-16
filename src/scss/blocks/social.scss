@@ -1,0 +1,40 @@
+@use '../mixins/hover.scss' as *;
+@use '../mixins/responsive.scss' as *;
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 1.25rem;
+  @include responsive(laptop) {
+    margin-top: 1.25rem;
+    margin-right: 1.875rem;
+  }
+  @include responsive(desktop) {
+    margin-right: 3.125rem;
+  }
+  &__follow {
+    color: rgb(152, 152, 152);
+    @include responsive(tablet) {
+      font-size: 1.25rem;
+    }
+  }
+  &__link {
+    display: inline-flex;
+    width: 2.1875rem;
+    height: 2.1875rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9375rem;
+    margin-left: 0.625rem;
+    border-radius: 50%;
+    @include hover {
+      background-color: var(--color-header-hover);
+    }
+
+    @include responsive(tablet) {
+      width: 40px;
+      font-size: 1.125rem;
+    }
+  }
+}

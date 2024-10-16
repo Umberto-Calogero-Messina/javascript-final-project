@@ -3,7 +3,6 @@
 
 .news {
   height: 950px;
-  background-color: var(--color-bg-news);
   padding-block: 70px;
   display: grid;
   grid-template-columns: 1fr;
@@ -17,5 +16,7 @@
   }
   @include responsive(desktop) {
     height: 400px;
+    max-width: 1400px;
+    margin-inline: auto;
   }
 }

@@ -15,6 +15,7 @@
   @include responsive(laptop) {
     padding: 1.25rem 0.625rem;
     margin-top: 0.625rem;
+    border-radius: 0.9375rem;
   }
   @include responsive(desktop) {
     max-width: 1400px;

@@ -1,0 +1,21 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.news {
+  height: 950px;
+  background-color: var(--color-bg-news);
+  padding-block: 70px;
+  display: grid;
+  grid-template-columns: 1fr;
+  @include responsive(tablet) {
+  }
+  @include responsive(laptop) {
+    padding-inline: 100px;
+    height: 530px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 100px;
+  }
+  @include responsive(desktop) {
+    height: 400px;
+  }
+}

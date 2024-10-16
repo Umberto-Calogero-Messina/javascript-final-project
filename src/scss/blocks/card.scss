@@ -1,0 +1,36 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.card {
+  margin-inline: auto;
+  margin-bottom: 40px;
+  padding-inline: 50px;
+  //   border-bottom: 1px dashed var(--color-card-span);
+
+  @include responsive(tablet) {
+    // border-bottom: none;
+  }
+
+  &__span {
+    color: var(--color-card-span);
+  }
+
+  &__review {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  }
+  &__title {
+    max-width: 370px;
+    color: white;
+    font-size: 30px;
+  }
+
+  &__text {
+    max-width: 370px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #68647d;
+    line-height: 1.6;
+  }
+}

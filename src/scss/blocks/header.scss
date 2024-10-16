@@ -7,6 +7,8 @@
   padding-bottom: 150px;
   background-image: url(../../assets/images/slider-bg-1.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 919px;
   color: white;
   border-bottom: 0.125rem solid var(--color-header-hover);
@@ -41,7 +43,7 @@
       font-size: 1.25rem;
     }
 
-    &-p {
+    &--p {
       color: rgba(255, 255, 255, 0.4);
       margin-bottom: 2.75rem;
       @include responsive(laptop) {

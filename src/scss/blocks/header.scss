@@ -78,7 +78,7 @@
     }
   }
   &_ul {
-    // display: none;
+    display: none;
     position: absolute;
     top: 7.5rem;
     left: 0;
@@ -148,8 +148,13 @@
     font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
-    background: #fff;
+    background-color: #fff;
     box-shadow: 0.5rem 0.5rem var(--color-header-hover);
+    border-radius: 10px;
+    @include hover {
+      background-color: #e2b7d3;
+      color: rgb(29, 29, 29);
+    }
     @include responsive(tablet) {
       font-size: 1.125rem;
     }

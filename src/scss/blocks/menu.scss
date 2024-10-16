@@ -44,11 +44,15 @@
 
     @include hover {
       background-color: #25394c;
-      border-radius: 0.625rem;
       @include responsive(laptop) {
         background-color: transparent;
         color: var(--color-header-hover);
       }
     }
+  }
+
+  &__active {
+    color: var(--color-header-hover);
+    border-bottom: 1px solid var(--color-header-hover);
   }
 }

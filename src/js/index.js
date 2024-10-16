@@ -4,14 +4,14 @@ import '../scss/styles.scss';
 import { toggleMenuElement } from './dom';
 import { toggleMenu } from './menu';
 
-const words = ['Quality', 'Professionalism', 'Compromise'];
+const words = ['Game On!', 'Quality!'];
 const span = document.getElementById('word');
 let wordIndex = 0;
 let letterIndex = 0;
 let deleting = false;
 
 function type() {
-  const currentWord = `#${words[wordIndex]}`;
+  const currentWord = `¡${words[wordIndex]}`;
   span.textContent = deleting ? currentWord.slice(0, --letterIndex) : currentWord.slice(0, ++letterIndex);
 
   if (!deleting && letterIndex === currentWord.length) {

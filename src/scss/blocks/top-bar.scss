@@ -9,8 +9,15 @@
   padding: 2.125rem 2.625rem;
   margin-inline: auto;
   box-shadow: 0 0 9px 3px var(--color-header-shadow);
-  border-radius: 0.9375rem 0.9375rem 0 0;
+  // border-radius: 0.9375rem 0.9375rem 0 0;
+  border-radius: 0.9375rem;
   width: 95%;
+  transition: border-radius 2.2s ease-out;
+
+  &--open {
+    border-radius: 0.9375rem 0.9375rem 0 0;
+    transition: border-radius 0s ease-out;
+  }
 
   @include responsive(laptop) {
     padding: 1.25rem 0.625rem;

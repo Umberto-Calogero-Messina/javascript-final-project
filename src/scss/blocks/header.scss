@@ -1,6 +1,7 @@
 @use '../mixins/hover.scss' as *;
 @use '../mixins/responsive.scss' as *;
 .header {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-bottom: 9.375rem;
@@ -17,6 +18,10 @@
     }
   }
 
+  &__title {
+    font-size: 5rem;
+  }
+
   &__info {
     // margin-top: auto;
     text-align: center;
@@ -25,7 +30,6 @@
       padding: 0 3.75rem;
     }
     @include responsive(laptop) {
-      padding: 12.5rem 6.25rem;
       font-size: 1.25rem;
     }
 
@@ -41,7 +45,7 @@
     }
   }
 
-  &_button {
+  &__button {
     padding: 0.9375rem 2.5rem;
     font-size: 0.875rem;
     font-weight: 700;

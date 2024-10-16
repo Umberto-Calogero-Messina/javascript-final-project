@@ -6,14 +6,13 @@
   align-items: center;
   justify-content: space-between;
   background-color: var(--color-header-bg);
-  padding: 3.125rem 0.625rem;
+  padding: 2.125rem 2.625rem;
   margin-inline: auto;
   box-shadow: 0 0 9px 3px var(--color-header-shadow);
   border-radius: 0.9375rem 0.9375rem 0 0;
   width: 95%;
 
   @include responsive(laptop) {
-    border-radius: 0.9375rem;
     padding: 1.25rem 0.625rem;
     margin-top: 0.625rem;
   }

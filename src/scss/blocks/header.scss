@@ -1,5 +1,6 @@
 @use '../mixins/hover.scss' as *;
 @use '../mixins/responsive.scss' as *;
+
 .header {
   position: relative;
   display: flex;
@@ -12,6 +13,23 @@
   height: 919px;
   color: white;
   border-bottom: 0.125rem solid var(--color-header-hover);
+
+  &--gaming {
+    background-image: url(../../assets/images/slider-bg-2.jpg);
+    background-position: center top;
+    height: 600px;
+    @include responsive(laptop) {
+      height: 400px;
+    }
+  }
+
+  &__top {
+    @include responsive(desktop) {
+      width: 100%;
+      max-width: 1400px;
+      margin-inline: auto;
+    }
+  }
 
   &_logo {
     width: 150px;

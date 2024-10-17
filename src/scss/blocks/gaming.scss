@@ -1,0 +1,63 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.gaming {
+  width: 100%;
+  text-align: center;
+  @include responsive(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+  @include responsive(laptop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include responsive(desktop) {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+  &__container {
+    width: 300px;
+    margin-inline: auto;
+    padding-block: 50px;
+    @include responsive(tablet) {
+      width: 300px;
+    }
+  }
+
+  &__img {
+    width: 200px;
+    margin-inline: auto;
+    @include responsive(tablet) {
+      width: 300px;
+    }
+  }
+
+  &__title {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+    background-color: #b01ba5;
+    border: 1px solif var(--color-bg-news);
+    border-radius: 15px;
+    padding: 10px 40px;
+    @include hover {
+      background-color: #83127b;
+      color: rgb(37, 37, 37);
+    }
+  }
+}

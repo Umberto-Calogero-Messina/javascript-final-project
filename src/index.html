@@ -9,8 +9,6 @@
 
 
     ** Los link de la navbar salen fuara al reducir pantalla
-    ** Cuando reduces la pantalla aparece un efecto de mostrar/quitar el menu por un segundo
-    ** Los social arriba deberian estan con max-width 1400 solo que no estan en right 0
 
 -->
 
@@ -32,24 +30,27 @@
   </head>
   <body>
     <header class="header">
-      <div class="social">
-        <p class="social__follow">Follow me:</p>
-        <a class="social__link" href="#">
-          <i class="bi bi-pinterest"></i>
-        </a>
-        <a class="social__link" href="#"><i class="bi bi-facebook"></i></a>
-        <a class="social__link" href="#"><i class="bi bi-twitter"></i></a>
-        <a class="social__link" href="#"><i class="bi bi-dribbble"></i></a>
-        <a class="social__link" href="#"><i class="bi bi-behance"></i></a>
+      <div class="header__top">
+        <div class="social">
+          <p class="social__follow">Follow me:</p>
+          <a class="social__link" href="#">
+            <i class="bi bi-pinterest"></i>
+          </a>
+          <a class="social__link" href="#"><i class="bi bi-facebook"></i></a>
+          <a class="social__link" href="#"><i class="bi bi-twitter"></i></a>
+          <a class="social__link" href="#"><i class="bi bi-dribbble"></i></a>
+          <a class="social__link" href="#"><i class="bi bi-behance"></i></a>
+        </div>
+        <div id="top-bar" class="top-bar">
+          <!-- site logo -->
+          <a href="index.html" class>
+            <img class="logo" src="./assets/images/logo.png" alt />
+          </a>
+          <span class="top-bar__span">MENU <i id="toggle-menu"
+              class="bi bi-list"></i></span>
+        </div>
       </div>
-      <div id="top-bar" class="top-bar">
-        <!-- site logo -->
-        <a href="index.html" class>
-          <img class="logo" src="./assets/images/logo.png" alt />
-        </a>
-        <span class="top-bar__span">MENU <i id="toggle-menu"
-            class="bi bi-list"></i></span>
-      </div>
+
       <nav>
         <ul id="menu" class="menu">
           <li class="menu__item menu__active">
@@ -71,8 +72,8 @@
       </nav>
 
       <div class="header__info">
-        <h1 id="word" class="header__title"></h1>
-        <!-- <h1 class="header__title ">Game on!</h1> -->
+        <!-- <span id="word" class="header__title"></span> -->
+        <h1 class="header__title ">Game on!</h1>
         <p class="header__info--p">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore iusto
           neque necessitatibus! Possimus a aspernatur, dolores beatae

@@ -1,0 +1,53 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
+
+.top-page {
+  width: 100%;
+  margin-top: 30px;
+  @include responsive(laptop) {
+    margin-top: 100px;
+  }
+  @include responsive(desktop) {
+    margin-top: 0;
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+}
+
+.page-info {
+  font-size: 15px;
+  color: #fff;
+  padding-left: 20px;
+
+  @include responsive(laptop) {
+    padding-left: 40px;
+    font-size: 25px;
+  }
+  @include responsive(desktop) {
+    padding-left: 50px;
+  }
+  &--title {
+    margin-block: 10px;
+    color: #fff;
+    font-size: 30px;
+    @include responsive(laptop) {
+      font-size: 40px;
+    }
+  }
+}
+
+.page-folder {
+  &--link {
+    font-style: italic;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &--span {
+    color: #c313b7;
+  }
+}

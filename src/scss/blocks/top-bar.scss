@@ -2,6 +2,7 @@
 @use '../mixins/responsive.scss' as *;
 
 .top-bar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -33,6 +33,8 @@
   &__span {
     cursor: pointer;
     font-size: 1.125rem;
+    position: absolute;
+    right: 2rem;
     @include responsive(tablet) {
       font-size: 1.25rem;
     }

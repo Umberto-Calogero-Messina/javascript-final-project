@@ -3,21 +3,31 @@
 
 .aboutme {
   padding-block: 40px;
-  background-color: var(--color-bg-section);
   color: white;
+
+  @include responsive(desktop) {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
 
   &__container {
     padding-inline: 30px;
     margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     @include responsive(laptop) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: row;
+
       gap: 60px;
     }
 
     &--reverse {
-      flex-direction: row-reverse;
+      @include responsive(laptop) {
+        flex-direction: row-reverse;
+      }
     }
   }
 

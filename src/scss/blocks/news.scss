@@ -11,16 +11,36 @@
     grid-template-columns: 1fr;
     margin-inline: auto;
 
+    &--news {
+      height: 100%;
+    }
+
     @include responsive(laptop) {
       padding-inline: 100px;
       height: 650px;
       grid-template-columns: repeat(3, 1fr);
       padding-top: 150px;
+      &--news {
+        height: 100%;
+      }
     }
     @include responsive(desktop) {
       height: 600px;
       max-width: 1400px;
       padding-top: 180px;
+      &--news {
+        height: 100%;
+        padding-top: 0;
+      }
     }
+  }
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    padding-top: 50px;
+    margin-bottom: 50px;
   }
 }

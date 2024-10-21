@@ -1,6 +1,8 @@
 /* ESTILOS DEL MAIN */
 .main {
-  &__gaming {
+  &__gaming,
+  &__aboutme,
+  &__news {
     background-color: var(--color-bg-news);
   }
 }

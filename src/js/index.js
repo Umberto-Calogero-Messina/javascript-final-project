@@ -3,6 +3,26 @@
 import '../scss/styles.scss';
 import { toggleMenuElement } from './dom';
 import { toggleMenu } from './menu';
+import { GAMES } from './games.js';
+
+const createGameCard = (game) => {
+  return `
+      <div class="gaming__container">
+        <h3 class="gaming__title">${game.title}</h3>
+        <img class="gaming__img" src="${game.imgSrc}" alt="${game.title}" />
+        <p class="gaming__desc">${game.desc}</p>
+        <a class="gaming__link" href="${game.link}">Play</a>
+      </div>
+    `;
+};
+
+const gamingContainer = document.getElementById('gaming-container');
+
+GAMES.forEach((game) => {
+  gamingContainer.innerHTML += createGameCard(game);
+});
+
+toggleMenuElement.addEventListener('click', toggleMenu);
 
 // const words = ['Game On!', 'Quality!'];
 // const span = document.getElementById('word');
@@ -28,5 +48,3 @@ import { toggleMenu } from './menu';
 // }
 
 // type();
-
-toggleMenuElement.addEventListener('click', toggleMenu);

@@ -7,25 +7,34 @@
   padding-inline: 50px;
   //   border-bottom: 1px dashed var(--color-card-span);
 
-  @include responsive(tablet) {
-    // border-bottom: none;
+  @include responsive(desktop) {
+    margin-bottom: 40px;
   }
 
   &__span {
     font-size: 25px;
     font-weight: 500;
     color: var(--color-card-span);
+    @include responsive(desktop) {
+      font-size: 30px;
+    }
   }
 
   &__review {
     font-size: 18px;
     font-weight: 500;
     color: white;
+    @include responsive(desktop) {
+      font-size: 22px;
+    }
   }
   &__title {
     max-width: 370px;
     color: white;
     font-size: 30px;
+    @include responsive(desktop) {
+      font-size: 40px;
+    }
   }
 
   &__text {
@@ -34,5 +43,8 @@
     font-weight: 500;
     color: #68647d;
     line-height: 1.6;
+    @include responsive(desktop) {
+      font-size: 18px;
+    }
   }
 }

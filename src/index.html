@@ -7,6 +7,8 @@
  
     https://themewagon.com/themes/free-bootstrap-4-html5-gaming-website-template-endgame/
 
+    ** Hacer que en menu pequeño puedes entrar en la pagina dando click a todo el li y no solo en el a
+
 -->
 
     <link rel="icon" type href="./assets/images/favicon.ico" />
@@ -61,6 +63,9 @@
                 <a href="/html/about.html">About Me</a>
               </li>
               <li class="menu__item">
+                <a href="/html/about.html">Project</a>
+              </li>
+              <li class="menu__item">
                 <a href="/html/news.html">News</a>
               </li>
               <li class="menu__item">
@@ -87,43 +92,10 @@
 
     <main class="main">
       <section class="news">
-        <div class="news__container">
-          <div class="card">
-            <span class="card__review"
-              >11.11.19 / in <span class="card__span">Added</span></span
-            >
-            <h2 class="card__title">The best online game is out now!</h2>
-            <p class="card__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida....
-            </p>
-          </div>
-          <div class="card">
-            <span class="card__review"
-              >11.11.18 / in <span class="card__span"> Review</span></span
-            >
-            <h2 class="card__title">The best online game is out now!</h2>
-            <p class="card__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida....
-            </p>
-          </div>
-          <div class="card">
-            <span class="card__review"
-              >11.11.17 / in <span class="card__span">Removed</span></span
-            >
-            <h2 class="card__title">The best online game is out now!</h2>
-            <p class="card__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida....
-            </p>
-          </div>
+        <div class="news__container" id="latest_news">
+          <!-- Las últimas noticias se agregarán aquí dinámicamente -->
         </div>
       </section>
-
       <!-- Intro section -->
       <section class="video">
         <a

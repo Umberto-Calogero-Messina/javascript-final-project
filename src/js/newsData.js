@@ -6,7 +6,7 @@ export const newsData = [
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida....',
   },
   {
-    date: '11.11.21',
+    date: '11.11.20',
     status: 'Fixed',
     title: 'The best online game is out now!',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida....',

@@ -72,7 +72,9 @@ const newsContainer = document.getElementById('news-container');
 
 newsData.forEach((data) => {
   const card = createCard(data);
-  newsContainer.appendChild(card);
+  if (newsContainer) {
+    newsContainer.appendChild(card);
+  }
 });
 
 // const words = ['Game On!', 'Quality!'];
@@ -99,3 +101,33 @@ newsData.forEach((data) => {
 // }
 
 // type();
+
+const latestNews = newsData.slice(0, 3);
+const latestContainer = document.getElementById('latest_news');
+
+if (latestContainer) {
+  latestContainer.innerHTML = '';
+
+  latestNews.forEach(({ date, status, title, text }) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const reviewElement = document.createElement('span');
+    reviewElement.className = 'card__review';
+    reviewElement.innerHTML = `${date} / in <span class="card__span">${status}</span>`;
+
+    const titleElement = document.createElement('h2');
+    titleElement.className = 'card__title';
+    titleElement.textContent = title;
+
+    const textElement = document.createElement('p');
+    textElement.className = 'card__text';
+    textElement.textContent = text;
+
+    card.appendChild(reviewElement);
+    card.appendChild(titleElement);
+    card.appendChild(textElement);
+
+    latestContainer.appendChild(card);
+  });
+}

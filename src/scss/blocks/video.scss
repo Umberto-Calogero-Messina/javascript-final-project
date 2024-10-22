@@ -1,5 +1,6 @@
 @use '../mixins/pseudo.scss' as *;
 @use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
 
 .video {
   position: relative;
@@ -22,7 +23,12 @@
     padding-top: 45px;
     padding-left: 45px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.16);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease-in-out;
+    @include hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      transition: background-color 0.3s ease-in-out;
+    }
   }
 
   &__img {

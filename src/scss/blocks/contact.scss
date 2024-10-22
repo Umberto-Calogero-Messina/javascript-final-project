@@ -1,0 +1,55 @@
+@use '../mixins/responsive.scss' as *;
+
+.contact {
+  color: white;
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 60px;
+
+  @include responsive(desktop) {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+
+  &__title {
+    margin: 0;
+    padding-bottom: 50px;
+    font-size: 3rem;
+    @include responsive(desktop) {
+      font-size: 4rem;
+    }
+  }
+
+  &__card {
+    width: 320px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-bottom: 30px;
+    @include responsive(desktop) {
+      width: 600px;
+      grid-template-columns: 110px 1fr;
+    }
+    &--adress {
+      font-size: 16px;
+      cursor: pointer;
+      @include responsive(desktop) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__logo {
+    font-size: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 18px;
+    @include responsive(desktop) {
+      font-size: 50px;
+      padding: 25px;
+    }
+  }
+}

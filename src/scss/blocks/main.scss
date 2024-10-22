@@ -2,7 +2,8 @@
 .main {
   &__gaming,
   &__aboutme,
-  &__news {
+  &__news,
+  &__contact {
     background-color: var(--color-bg-news);
   }
 }

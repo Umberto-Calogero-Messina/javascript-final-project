@@ -64,7 +64,7 @@
 
   .footer__menu {
     padding-top: 62px;
-    color: white;
+    color: var(--color-white);
     list-style: none;
     text-align: center;
     padding-top: 3px;
@@ -88,7 +88,7 @@
   .copyright {
     font-size: 12px;
     font-weight: 500;
-    color: #9190a5;
+    color: var(--color-copyright);
     opacity: 0.2;
     @include responsive(tablet) {
       font-size: 12px;
@@ -102,7 +102,7 @@
 .social {
   &--footer {
     margin-bottom: 40px;
-    color: white;
+    color: var(--color-white);
     display: flex;
     justify-content: center;
     padding-bottom: 20px;

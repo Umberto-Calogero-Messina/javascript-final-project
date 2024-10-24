@@ -1,7 +1,7 @@
 @use '../mixins/responsive.scss' as *;
 
 .contact {
-  color: white;
+  color: var(--color-white);
   padding-top: 50px;
   text-align: center;
   padding-bottom: 60px;
@@ -44,7 +44,7 @@
 
   &__logo {
     font-size: 2rem;
-    border: 1px solid white;
+    border: 1px solid var(--color-white);
     border-radius: 50%;
     padding: 18px;
     @include responsive(desktop) {

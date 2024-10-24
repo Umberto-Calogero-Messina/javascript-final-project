@@ -1,5 +1,6 @@
 @use '../mixins/responsive.scss' as *;
 @use '../mixins/hover.scss' as *;
+@use '../mixins/pseudo.scss' as *;
 
 .gaming {
   width: 100%;
@@ -20,44 +21,67 @@
   &__container {
     width: 300px;
     margin-inline: auto;
-    padding-block: 50px;
+    padding-block: 70px;
+    position: relative;
+    isolation: isolate;
     @include responsive(tablet) {
       width: 300px;
+    }
+    @include responsive(laptop) {
+      &::before {
+        @include pseudo(300px, 300px) {
+          background-color: var(--color-card-span);
+          top: 70px;
+          left: 0;
+          opacity: 0;
+          border-radius: 15px;
+          transition: opacity 0.4s ease-in-out;
+        }
+      }
+      @include hover {
+        & .gaming__title {
+          opacity: 1;
+        }
+        &:before {
+          opacity: 0.6;
+        }
+      }
+    }
+    @include responsive(desktop) {
+      width: 400px;
+      &::before {
+        @include pseudo(400px, 400px) {
+        }
+      }
     }
   }
 
   &__img {
     width: 200px;
     margin-inline: auto;
+    pointer-events: none;
+    position: relative;
+    z-index: -1;
     @include responsive(tablet) {
-      width: 300px;
+      width: 600px;
     }
   }
 
   &__title {
-    font-size: 25px;
-    color: #fff;
+    font-size: 50px;
+    color: var(--color-white);
     margin-bottom: 20px;
+    position: absolute;
+    bottom: 4rem;
+    left: 20px;
+    // translate: -50%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
   }
 
   &__desc {
-    color: white;
+    color: var(--color-white);
     font-size: 18px;
     margin-bottom: 30px;
-  }
-
-  &__link {
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-style: italic;
-    background-color: #b01ba5;
-    border: 1px solif var(--color-bg-news);
-    border-radius: 15px;
-    padding: 10px 40px;
-    @include hover {
-      background-color: #83127b;
-      color: rgb(37, 37, 37);
-    }
   }
 }

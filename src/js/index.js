@@ -7,6 +7,12 @@ import { GAMES } from './game';
 import { newsData } from './newsData';
 
 const createGameCard = ({ title, imgSrc, desc, link }) => {
+  const linkElement = document.createElement('a');
+  linkElement.className = 'gaming__link';
+  linkElement.href = link;
+  linkElement.target = '_blank';
+  // linkElement.textContent = 'Play';
+
   const card = document.createElement('div');
   card.className = 'gaming__container';
 
@@ -19,27 +25,17 @@ const createGameCard = ({ title, imgSrc, desc, link }) => {
   imgElement.src = imgSrc;
   imgElement.alt = title;
 
-  const descElement = document.createElement('p');
-  descElement.className = 'gaming__desc';
-  descElement.textContent = desc;
-
-  const linkElement = document.createElement('a');
-  linkElement.className = 'gaming__link';
-  linkElement.href = link;
-  linkElement.textContent = 'Play';
-
   card.appendChild(titleElement);
   card.appendChild(imgElement);
-  card.appendChild(descElement);
-  card.appendChild(linkElement);
+  linkElement.appendChild(card);
 
-  return card;
+  return linkElement;
 };
 
 const gamingContainer = document.getElementById('gaming-container');
 const fragment = document.createDocumentFragment();
 
-GAMES.forEach((game) => fragment.append(createGameCard(game)));
+GAMES.forEach(game => fragment.append(createGameCard(game)));
 if (gamingContainer) {
   gamingContainer.append(fragment);
 }
@@ -70,7 +66,7 @@ const createCard = ({ date, status, title, text }) => {
 
 const newsContainer = document.getElementById('news-container');
 
-newsData.forEach((data) => {
+newsData.forEach(data => {
   const card = createCard(data);
   if (newsContainer) {
     newsContainer.appendChild(card);

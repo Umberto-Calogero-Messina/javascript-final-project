@@ -23,14 +23,14 @@
   &__review {
     font-size: 18px;
     font-weight: 500;
-    color: white;
+    color: var(--color-white);
     @include responsive(desktop) {
       font-size: 22px;
     }
   }
   &__title {
     max-width: 370px;
-    color: white;
+    color: var(--color-white);
     font-size: 30px;
     @include responsive(desktop) {
       font-size: 40px;
@@ -41,7 +41,7 @@
     max-width: 370px;
     font-size: 15px;
     font-weight: 500;
-    color: #68647d;
+    color: var(--color-text);
     line-height: 1.6;
     @include responsive(desktop) {
       font-size: 18px;

@@ -3,8 +3,7 @@
 
 .aboutme {
   padding-block: 40px;
-  color: white;
-
+  color: var(--color-white);
   @include responsive(desktop) {
     max-width: 1400px;
     margin-inline: auto;

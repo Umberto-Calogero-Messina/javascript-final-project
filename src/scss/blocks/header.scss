@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 919px;
-  color: white;
+  color: var(--color-white);
   border-bottom: 0.125rem solid var(--color-header-hover);
 
   &--gaming {
@@ -62,7 +62,7 @@
     }
 
     &--p {
-      color: rgba(255, 255, 255, 0.4);
+      color: var(--color-text);
       margin-bottom: 2.75rem;
       @include responsive(laptop) {
         margin-bottom: 60px;
@@ -80,13 +80,13 @@
     font-weight: 700;
     font-style: italic;
     text-transform: uppercase;
-    background-color: #fff;
+    background-color: var(--color-white);
     box-shadow: 0.5rem 0.5rem var(--color-header-hover);
     border-radius: 10px;
     cursor: pointer;
     @include hover {
-      background-color: #e2b7d3;
-      color: rgb(29, 29, 29);
+      background-color: var(--color-button-hover);
+      color: var(--color-black);
     }
     @include responsive(tablet) {
       font-size: 1.125rem;
